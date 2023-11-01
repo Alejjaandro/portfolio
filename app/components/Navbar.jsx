@@ -71,19 +71,19 @@ export default function Navbar() {
                     <div className="py-4 flex flex-col">
                         <ul className="uppercase">
                             <Link href='/'>
-                                <li className="py-4 text-sm hover:border-b">Home</li>
+                                <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>Home</li>
                             </Link>
-                            <Link href='/'>
-                                <li className="py-4 text-sm hover:border-b">About</li>
+                            <Link href='/#about'>
+                                <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>About</li>
                             </Link>
-                            <Link href='/'>
-                                <li className="py-4 text-sm hover:border-b">Skills</li>
+                            <Link href='/#skills'>
+                                <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>Skills</li>
                             </Link>
-                            <Link href='/'>
-                                <li className="py-4 text-sm hover:border-b">Projects</li>
+                            <Link href='/#projects'>
+                                <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>Projects</li>
                             </Link>
-                            <Link href='/'>
-                                <li className="py-4 text-sm hover:border-b">Contact</li>
+                            <Link href='/#contact'>
+                                <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>Contact</li>
                             </Link>
                         </ul>
 
