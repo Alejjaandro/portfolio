@@ -15,7 +15,7 @@ import GitHub from '../../public/assets/skills/github.png'
 
 export default function Skills() {
     return (
-        <div className='w-full lg:h-screen p-2'>
+        <div id='skills' className='w-full lg:h-screen p-2'>
 
             <div className='max-w-[1240xp] mx-auto flex flex-col justify-center h-full'>
                 <p className='uppercase text-xl tracking-widest text-violet-600'>Skills</p>

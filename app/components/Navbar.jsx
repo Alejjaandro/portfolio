@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import navLogo from '../../public/assets/navLogo.png'
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai'
@@ -10,11 +10,20 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 export default function Navbar() {
 
     const [sideNavbar, setSideNavbar] = useState(false);
+    const [shadow, setShadow] = useState(false);
+
+    useEffect(() => {
+        const handleShadow = () => {
+            if (window.scrollY >= 90) {setShadow(true)} else {setShadow(false)}
+        };
+
+        window.addEventListener('scroll', handleShadow);
+    }, [])
 
     const handleSideNavbar = () => setSideNavbar(!sideNavbar)
 
     return (
-        <div className="fixed w-full h-20 shadow-xl z-[100]">
+        <div className={shadow ? "fixed w-full h-20 shadow-xl z-[100]" : "fixed w-full h-20 z-[100]"}>
             <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
                 <Image src={navLogo} alt="/" width={70} height={0} />
                 <div>
@@ -22,16 +31,16 @@ export default function Navbar() {
                         <Link href='/'>
                             <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
                         </Link>
-                        <Link href='/'>
+                        <Link href='/#about'>
                             <li className="ml-10 text-sm uppercase hover:border-b">About</li>
                         </Link>
-                        <Link href='/'>
+                        <Link href='/#skills'>
                             <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
                         </Link>
-                        <Link href='/'>
+                        <Link href='/#projects'>
                             <li className="ml-10 text-sm uppercase hover:border-b">Projects</li>
                         </Link>
-                        <Link href='/'>
+                        <Link href='/#contact'>
                             <li className="ml-10 text-sm uppercase hover:border-b">Contact</li>
                         </Link>
                     </ul>
@@ -81,15 +90,20 @@ export default function Navbar() {
                         <div className="pt-40">
                             <p className="uppercase tracking-widest text-violet-600 mb-4">{"Let's Connect"}</p>
                             <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-125">
-                                    <FaLinkedinIn />
-                                </div>
-                                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-125">
-                                    <FaGithub />
-                                </div>
-                                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-125">
-                                    <AiOutlineMail />
-                                </div>
+                            <a href='https://www.linkedin.com/in/alejandro-olaso-fullstackweb/' target='_blank' rel='noreferrer'>
+                                        <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-150'>
+                                            <FaLinkedinIn />
+                                        </div>
+                                    </a>
+                                    <a href='https://github.com/Alejjaandro' target='_blank' rel='noreferrer'>
+                                        <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-150'>
+                                            <FaGithub />
+                                        </div>
+                                    </a>
+
+                                    <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-150'>
+                                        <AiOutlineMail />
+                                    </div>
                             </div>
                         </div>
                     </div>
