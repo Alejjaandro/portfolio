@@ -1,11 +1,18 @@
+'use client'
+
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import navLogo from '../../public/assets/navLogo.png'
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 export default function Navbar() {
+
+    const [sideNavbar, setSideNavbar] = useState(false);
+
+    const handleSideNavbar = () => setSideNavbar(!sideNavbar)
+
     return (
         <div className="fixed w-full h-20 shadow-xl z-[100]">
             <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
@@ -29,16 +36,21 @@ export default function Navbar() {
                         </Link>
                     </ul>
                 </div>
-                <div className="md:hidden">
+                <div onClick={handleSideNavbar} className="md:hidden">
                     <AiOutlineMenu size={25} />
                 </div>
             </div>
 
-            <div className="fixed left-0 top-0 w-full h-screen bg-black/70">
-                <div className="fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white p-10 ease-in duration-500">
+            {/* ===== SIDE NAVBAR ===== */}
+            <div className={sideNavbar ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""}>
+                <div className={
+                    sideNavbar
+                        ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white p-10 ease-in duration-500"
+                        : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+                }>
                     <div className="flex w-full items-center justify-between">
                         <Image src={navLogo} alt="/" width={70} height={0} />
-                        <div className="rounded-full shadow-lg shadow-gray-400 cursor-pointer p-4">
+                        <div onClick={handleSideNavbar} className="rounded-full shadow-lg shadow-gray-400 cursor-pointer p-4">
                             <AiOutlineClose size={25} />
                         </div>
                     </div>
