@@ -6,11 +6,28 @@ import Link from "next/link";
 import navLogo from '../../public/assets/navLogo.png'
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
 
     const [sideNavbar, setSideNavbar] = useState(false);
     const [shadow, setShadow] = useState(false);
+    const [navBg, setNavBg] = useState('white');
+    const [linkColor, setLinkColor] = useState('#1f2937');
+    const path = usePathname();
+
+    useEffect(() => {
+        if(
+            path === '/ecommerce' || 
+            path === '/upcomings'
+        ) {
+            setNavBg('transparent');
+            setLinkColor('white');
+        } else {
+            setNavBg('white');
+            setLinkColor('#1f2937');
+        }
+    }, [path])
 
     useEffect(() => {
         const handleShadow = () => {
@@ -23,11 +40,11 @@ export default function Navbar() {
     const handleSideNavbar = () => setSideNavbar(!sideNavbar)
 
     return (
-        <div className={shadow ? "fixed w-full h-20 shadow-xl z-[100]" : "fixed w-full h-20 z-[100]"}>
+        <div style={{backgroundColor: `${navBg}`}} className={shadow ? "fixed w-full h-20 shadow-xl z-[100]" : "fixed w-full h-20 z-[100]"}>
             <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
                 <Image src={navLogo} alt="/" width={70} height={0} />
                 <div>
-                    <ul className="hidden md:flex">
+                    <ul style={{color: `${linkColor}`}} className="hidden md:flex">
                         <Link href='/'>
                             <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
                         </Link>

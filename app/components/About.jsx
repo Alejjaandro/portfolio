@@ -27,9 +27,9 @@ export default function About() {
                         est eaque, suscipit velit quis cumque magnam ut?
                     </p>
 
-                    <p className="py-2 text-gray-600 underline cursor-pointer">
+                    <a href="#projects" className="py-2 text-violet-600 underline cursor-pointer">
                         Checkout my lastest projects
-                    </p>
+                    </a>
                 </div>
 
                 <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">

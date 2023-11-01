@@ -9,7 +9,6 @@ import Contact from './components/Contact'
 export default function Home() {
     return (
         <React.Fragment>
-            <Navbar/>
             <Main/>
             <About/>
             <Skills/>

@@ -1,11 +1,12 @@
 import React from 'react'
 import ecommerceImg from '../../public/assets/projects/ecommerce.png'
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 
 import { RiRadioButtonFill } from 'react-icons/ri'
 
 export default function ecommerce() {
+
     return (
         <div className='w-full'>
             <div className='w-screen h-[50vh] relative'>
@@ -16,12 +17,11 @@ export default function ecommerce() {
                     <h3>React JS / NodeJS / Express / MongoDB</h3>
                 </div>
             </div>
-
             <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8'>
                 <div className='col-span-4'>
                     <p className='uppercase text-violet-600'>Ecommerce App</p>
                     <h2 className='my-2'>Overview</h2>
-                    <p className='my-2'>
+                    <div className='my-2'>
                         This is an e-commerce project that provides:
                         <ul className='mx-4 list-disc'>
                             <li className='m-1 cursor-auto'>Full front-end and back-end development, as well as the design and implementation of the database.</li>
@@ -29,7 +29,7 @@ export default function ecommerce() {
                             <li className='m-1 cursor-auto'>CRUD operations on multiple models.</li>
                             <li className='m-1 cursor-auto'>Implementation of a REST API to facilitate communication between different parts of the application.</li>
                         </ul>
-                    </p>
+                    </div>
                     <p className='mt-4'>
                         It might take a moment to charge all the products from the database because the DB is hosted in render,
                         and the free tier shuts down after 15 minutes of inactivity, so the first request after the service is shut down
