@@ -7,7 +7,7 @@ import ProjectItem from './ProjectItem'
 export default function Projects() {
   return (
     <div id='projects' className='w-full'>
-        <div className='max-w-[1240px] mx-auto  px-2 py-16'>
+        <div className='max-w-[1240px] mx-auto px-2 py-24'>
 
             <p className='text-xl tracking-widest uppercase text-violet-600'>Projects</p>
             <h2 className='py-4'>{"What I've Built"}</h2>
