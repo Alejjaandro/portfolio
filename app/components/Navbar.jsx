@@ -1,9 +1,7 @@
 'use client'
 
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import navLogo from '../../public/assets/navLogo.png'
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { usePathname } from 'next/navigation'
@@ -43,21 +41,21 @@ export default function Navbar() {
         <div style={{ backgroundColor: `${navBg}` }} className={shadow ? "fixed w-full h-20 shadow-xl z-[100]" : "fixed w-full h-20 z-[100]"}>
             <div className="flex justify-around items-center w-full h-full px-2 2xl:px-16">
                 <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
-                    <Link href='/'>
+                    <a href='/'>
                         <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
-                    </Link>
-                    <Link href='/#about'>
+                    </a>
+                    <a href='/#about'>
                         <li className="ml-10 text-sm uppercase hover:border-b">About</li>
-                    </Link>
-                    <Link href='/#skills'>
+                    </a>
+                    <a href='/#skills'>
                         <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
-                    </Link>
-                    <Link href='/#projects'>
+                    </a>
+                    <a href='/#projects'>
                         <li className="ml-10 text-sm uppercase hover:border-b">Projects</li>
-                    </Link>
-                    <Link href='/#contact'>
+                    </a>
+                    <a href='/#contact'>
                         <li className="ml-10 text-sm uppercase hover:border-b">Contact</li>
-                    </Link>
+                    </a>
                 </ul>
                 <div onClick={handleSideNavbar} className="md:hidden">
                     <AiOutlineMenu size={25} />
@@ -84,21 +82,21 @@ export default function Navbar() {
 
                     <div className="py-4 flex flex-col">
                         <ul className="uppercase">
-                            <Link href='/'>
+                            <a href='/'>
                                 <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>Home</li>
-                            </Link>
-                            <Link href='/#about'>
+                            </a>
+                            <a href='/#about'>
                                 <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>About</li>
-                            </Link>
-                            <Link href='/#skills'>
+                            </a>
+                            <a href='/#skills'>
                                 <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>Skills</li>
-                            </Link>
-                            <Link href='/#projects'>
+                            </a>
+                            <a href='/#projects'>
                                 <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>Projects</li>
-                            </Link>
-                            <Link href='/#contact'>
+                            </a>
+                            <a href='/#contact'>
                                 <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>Contact</li>
-                            </Link>
+                            </a>
                         </ul>
 
                         <div className="pt-40">
