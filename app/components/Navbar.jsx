@@ -44,9 +44,9 @@ export default function Navbar() {
                     <a href='/'>
                         <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
                     </a>
-                    <a href='/#about'>
+                    {/* <a href='/#about'>
                         <li className="ml-10 text-sm uppercase hover:border-b">About</li>
-                    </a>
+                    </a> */}
                     <a href='/#skills'>
                         <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
                     </a>
@@ -85,9 +85,9 @@ export default function Navbar() {
                             <a href='/'>
                                 <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>Home</li>
                             </a>
-                            <a href='/#about'>
+                            {/* <a href='/#about'>
                                 <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>About</li>
-                            </a>
+                            </a> */}
                             <a href='/#skills'>
                                 <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>Skills</li>
                             </a>

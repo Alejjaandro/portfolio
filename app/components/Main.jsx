@@ -25,8 +25,13 @@ export default function Main() {
                     <p className='hidden md:inline-block xl:text-xl py-2 text-gray-600 max-w-[70%] m-auto'>
                         My goal is to continuously expand my knowledge and take on new challenges to help build innovative and efficient web solutions. I am eager to contribute my skills to your team and grow as a Full Stack Developer.
                     </p>
+                    <p>
+                        <a href="#projects" className="py-2 text-violet-600 underline cursor-pointer">
+                            Checkout my lastest projects
+                        </a>
+                    </p>
 
-                    <div className='flex items-center justify-around max-w-[330px] m-auto py-4'>
+                    <div className='flex items-center justify-around max-w-[330px] m-auto py-6'>
                         <a href='https://www.linkedin.com/in/alejandro-olaso-fullstackweb/' target='_blank' rel='noreferrer'>
                             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                                 <FaLinkedinIn />

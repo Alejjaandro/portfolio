@@ -10,7 +10,7 @@ export default function Home() {
     return (
         <React.Fragment>
             <Main/>
-            <About/>
+            {/* <About/> */}
             <Skills/>
             <Projects/>
             <Contact/>
