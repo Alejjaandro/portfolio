@@ -17,7 +17,7 @@ export default function Skills() {
     return (
         <div id='skills' className='w-full px-2 py-24'>
 
-            <div className='max-w-[1240xp] mx-auto flex flex-col justify-center h-full'>
+            <div className='max-w-[1440px] mx-auto flex flex-col justify-center h-full'>
                 <p className='uppercase text-xl tracking-widest text-violet-600'>Skills</p>
                 <h2 className='py-4'>What I Know</h2>
 
