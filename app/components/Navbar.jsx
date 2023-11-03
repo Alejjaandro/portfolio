@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { usePathname } from 'next/navigation'
