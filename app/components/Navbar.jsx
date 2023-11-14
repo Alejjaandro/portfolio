@@ -16,7 +16,8 @@ export default function Navbar() {
     useEffect(() => {
         if (
             path === '/ecommerce' ||
-            path === '/upcomings'
+            path === '/upcomings' ||
+            path === '/spotifyClone'
         ) {
             setNavBg('transparent');
             setLinkColor('white');
