@@ -14,7 +14,7 @@ export default function pricetracker() {
                 <Image src={PriceTracker} className='absolute z-1' layout='fill' objectFit='cover' alt='/' />
                 <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
                     <h2 className='py-2'>Price Tracker Web</h2>
-                    <h3>Next / Node / MongoDB</h3>
+                    <h3>Next / Tailwind / Node / MongoDB</h3>
                 </div>
             </div>
 
@@ -26,7 +26,7 @@ export default function pricetracker() {
                         <p className='my-2'>
                             This is a web that scrape products from Amazon and keeps you posted of their price changes.
                             <br />
-                            It was made with NextJS, NodeJS and MongoDB.
+                            It was made with NextJS, Tailwind, NodeJS and MongoDB.
                         </p>
                         <p className='my-2'>
                             Functionalities:
@@ -51,6 +51,9 @@ export default function pricetracker() {
                         <div className='grid grid-cols-3 md:grid-cols-1'>
                             <p className='text-gray-600 py-2 flex items-center'>
                                 <RiRadioButtonFill className='pr-1' /> Next
+                            </p>
+                            <p className='text-gray-600 py-2 flex items-center'>
+                                <RiRadioButtonFill className='pr-1' /> Tailwind
                             </p>
                             <p className='text-gray-600 py-2 flex items-center'>
                                 <RiRadioButtonFill className='pr-1' /> Node
