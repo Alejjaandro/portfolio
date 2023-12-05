@@ -3,6 +3,7 @@ import React from 'react'
 import ecommerce from '../../public/assets/projects/ecommerce.png'
 import upcomings from '../../public/assets/projects/upcomings.png'
 import spotifyClone from '../../public/assets/projects/spotify-clone.png'
+import pricetracker from '../../public/assets/projects/pricetracker.png'
 import ProjectItem from './ProjectItem'
 
 export default function Projects() {
@@ -18,6 +19,7 @@ export default function Projects() {
                 <ProjectItem title='Ecommerce App' image={ecommerce} skills='React - Node - Express - MongoDB' projectUrl='/ecommerce'/>
                 <ProjectItem title='Upcomings Page' image={upcomings} skills='React and Bootstrap' projectUrl='/upcomings'/>
                 <ProjectItem title='Spotify Clone' image={spotifyClone} skills='Angular and Node' projectUrl='/spotifyClone'/>
+                <ProjectItem title='Price Tracker' image={pricetracker} skills='Next - Node - MongoDB' projectUrl='/pricetracker'/>
 
             </div>
 
