@@ -5,6 +5,7 @@ import upcomings from '../../public/assets/projects/upcomings.png'
 import spotifyClone from '../../public/assets/projects/spotify-clone.png'
 import pricetracker from '../../public/assets/projects/pricetracker.png'
 import CompanyWebImg from '../../public/assets/projects/CompanyWeb.png'
+import EcommerceWebImg from '../../public/assets/projects/ecommerce-web.png'
 import ProjectItem from './ProjectItem'
 
 export default function Projects() {
@@ -21,6 +22,7 @@ export default function Projects() {
           <ProjectItem title='Upcomings Page' image={upcomings} skills='React and Bootstrap' projectUrl='/upcomings' />
           <ProjectItem title='Spotify Clone' image={spotifyClone} skills='Angular and Node' projectUrl='/spotifyClone' />
           <ProjectItem title='Company Web' image={CompanyWebImg} skills='Next - Tailwind' projectUrl='/companyWeb' />
+          <ProjectItem title='Ecommerce web' image={EcommerceWebImg} skills='Next - CSS3' projectUrl='/ecommerceWeb' />
           <ProjectItem title='Price Tracker' image={pricetracker} skills='Next - Tailwind - Node - MongoDB' projectUrl='/pricetracker' />
 
         </div>
