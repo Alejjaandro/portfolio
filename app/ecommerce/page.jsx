@@ -20,9 +20,10 @@ export default function ecommerce() {
             <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8'>
                 <div className='col-span-4'>
                     <p className='uppercase text-violet-600'>Ecommerce App</p>
-                    <h2 className='my-2'>Overview</h2>
+                    <h2 className='my-2'>It&apos;s my largest project to date.
+</h2>
                     <div className='my-2'>
-                        This is an e-commerce project that provides:
+                        This is a fully functional Full-Stack Ecommerce project that provides:
                         <ul className='mx-4 list-disc'>
                             <li className='m-1 cursor-auto'>Full front-end and back-end development, as well as the design and implementation of the database.</li>
                             <li className='m-1 cursor-auto'>Complete user management with registration and login functionalities, and update of user account info.</li>
@@ -31,14 +32,14 @@ export default function ecommerce() {
                         </ul>
                     </div>
                     <p className='mt-4'>
-                        It might take a moment to charge all the products from the database because the DB is hosted in render,
-                        and the free tier shuts down after 15 minutes of inactivity, so the first request after the service is shut down
-                        may take a bit, but subsequent requests should be faster.
+                        It allows users to browse products, add them to the cart, and make purchases, as well as manage their account information.
+                        The user cart is stored in the database, so the user can log in from different devices and still have access to the same cart and order history.
                     </p>
+
                     <a href='https://github.com/Alejjaandro/ecommerce' target='_blank' rel='noreferrer'>
                         <button className='px-8 py-2 mt-4 mr-8'>Code</button>
                     </a>
-                    <a href='https://alejjaandro-ecommerce-project.netlify.app' target='_blank' rel='noreferrer' >
+                    <a href='https://alejjaandro-ecommerce-frontend.vercel.app' target='_blank' rel='noreferrer' >
                         <button className='px-8 py-2 mt-4'>Demo</button>
                     </a>
                 </div>

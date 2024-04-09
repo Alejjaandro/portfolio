@@ -22,7 +22,7 @@ export default function ecommerce() {
                     <p className='uppercase text-violet-600'>Ecommerce Web</p>
                     <h2 className='my-2'>Overview</h2>
                     <div className='my-2'>
-                        This is a single-page application project for a ecommerce. It&apos;s built with Next JS and CSS3.
+                        This is the Front-End side of my Full Stack Ecommerce built with Next JS and CSS3.
                         <p className='my-2 font-semibold'>Key Features:</p>
                         <ul className='list-disc list-inside'>
                             <li>Responsive design</li>
