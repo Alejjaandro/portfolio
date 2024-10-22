@@ -12,6 +12,8 @@ import Mongo from '../../public/assets/skills/mongo.png'
 import MySQL from '../../public/assets/skills/mysql.png'
 import Tailwind from '../../public/assets/skills/tailwind.png'
 import GitHub from '../../public/assets/skills/github.png'
+import Python from '../../public/assets/skills/python.png'
+import Django from '../../public/assets/skills/django.png'
 
 export default function Skills() {
     return (
@@ -36,6 +38,16 @@ export default function Skills() {
                     <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
                         <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                             <div className='m-auto'>
+                                <Image src={Python} alt='/' width={64} height={64}/>
+                            </div>
+                            <div className=''>
+                                <h3>Python</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                            <div className='m-auto'>
                                 <Image src={Node} alt='/' width={64} height={64}/>
                             </div>
                             <div className=''>
@@ -50,6 +62,16 @@ export default function Skills() {
                             </div>
                             <div className=''>
                                 <h3>React.js</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                            <div className='m-auto'>
+                                <Image src={Django} alt='/' width={64} height={64}/>
+                            </div>
+                            <div className=''>
+                                <h3>Django</h3>
                             </div>
                         </div>
                     </div>
