@@ -1,6 +1,6 @@
 import React from 'react'
 
-import spotifyClone from '../../public/assets/projects/spotify-clone.png'
+import spotifyClone from '../../public/assets/projects/spotifyClone.png'
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 

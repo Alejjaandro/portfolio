@@ -1,0 +1,67 @@
+[
+    {
+        "title": "Ecommerce App",
+        "tags": [
+            "React",
+            "Vite",
+            "Node",
+            "Express",
+            "MongoDB",
+            "Tailwind CSS",
+            "Redux Toolkit"
+        ],
+        "image": "ecommerce",
+        "link": "https://tech-ecommerce-frontend.vercel.app/",
+        "github": "https://github.com/Alejjaandro/ecommerce-MERN.git",
+        "description": "This is a fully functional Full-Stack Ecommerce project that provides:",
+        "functionalities": [
+            "Full front-end and back-end development, as well as the design and implementation of the database.",
+            "CRUD operations on multiple models.",
+            "Implementation of a REST API to facilitate communication between different parts of the application.",
+            "Complete user management with registration and login functionalities, and update of user account info.",
+            "Implementation of a shopping cart and checkout process."
+        ]
+    },
+    {
+        "title": "Titanic Predictor Game",
+        "tags": [
+            "Python",
+            "Scikit-learn",
+            "Numpy",
+            "Pandas",
+            "Machine Learning",
+            "TKinter"
+        ],
+        "image": "titanicPredictorGame",
+        "link": null,
+        "github": "https://github.com/Alejjaandro/machine_learning_supervised_learning",
+        "description": "This project is a Python-based application that predicts the survival of a fictional passenger aboard the Titanic based on user-provided characteristics.",
+        "functionalities": [
+            "Graphical User Interface (GUI): The application provides an easy-to-use GUI for entering passenger details. Users can input passenger characteristics such as class, sex, age, number of siblings/spouses, and number of parents/children.",
+            "3 different ML models: Gradient Boosting, Random Forest and Tree Decision Classifier.",
+            "Console area that displays real-time messages, including the steps of the prediction process and any errors encountered.",
+            "When the user resizes the window, the font size of labels and entry fields adjusts dynamically to ensure an optimal user experience."
+        ]
+    },
+    {
+        "title": "Company Web",
+        "tags": [
+            "Next JS",
+            "Tailwind CSS",
+            "JavaScript"
+        ],
+        "image": "companyWeb",
+        "link": "https://alejjaandro-company-web.vercel.app/",
+        "github": "https://github.com/Alejjaandro/CompanyWeb",
+        "description": [
+            "This is a single-page application project for a company. It's built with Next JS and Tailwind CSS.",
+            "This web template is designed for a professional company that prides itself on a diverse range of services, including consulting, financial advisory, marketing, branding, and project management. The website presents a sleek, modern interface with a clean, corporate aesthetic that conveys the company's commitment to professionalism and quality."
+        ],
+        "functionalities": [
+            "Responsive design",
+            "Service Highlight Sections",
+            "Dynamic Content Areas",
+            "User-friendly Navigation"
+        ]
+    }
+]
