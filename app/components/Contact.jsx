@@ -1,6 +1,6 @@
 'use client'
 
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import React, { useRef } from 'react'
 import ContactImg from '../../public/assets/contact.jpg'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'

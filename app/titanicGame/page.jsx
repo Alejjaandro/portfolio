@@ -1,7 +1,7 @@
 import React from 'react'
 
 import TitanicGame from '../../public/assets/projects/titanicPredictorGame.png'
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 
 import { RiRadioButtonFill } from 'react-icons/ri'

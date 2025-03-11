@@ -1,7 +1,7 @@
 import React from 'react'
-import CompanyWebImg from '../../public/assets/projects/companyWeb.png'
+import CompanyWebImg from '../../public/assets/projects/CompanyWeb.png'
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 import { RiRadioButtonFill } from 'react-icons/ri'
 

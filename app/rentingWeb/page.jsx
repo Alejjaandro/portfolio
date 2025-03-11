@@ -1,7 +1,7 @@
 import React from 'react'
 
 import RentingWeb from '../../public/assets/projects/rentingWeb.png'
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 
 import { RiRadioButtonFill } from 'react-icons/ri'
