@@ -17,7 +17,8 @@ export default function Main() {
                         {"I'm "} a Junior <strong>Full Stack Developer</strong> passionate about creating dynamic and user-friendly web applications.
                     </p>
                     <p className='text-sm md:text-base xl:text-lg py-2 text-gray-600 max-w-[70%] m-auto'>
-                        With a solid foundation in both front-end and back-end development, I have hands-on experience with technologies such as <strong>HTML, CSS, JavaScript and Python</strong>, and have worked with frameworks like <strong>React, Node.js, Django, Angular, Tailwind and Bootstrap</strong>. I am also proficient in database design and implementation.
+                        With a solid foundation in both front-end and back-end development, I have hands-on experience with technologies such as <strong>JavaScript, PHP and Python</strong>, and have worked with frameworks like <strong>React, Node.js, Laravel, Angular, Tailwind and Bootstrap</strong>. 
+                        I am also proficient in database design and implementation, mainly with <strong>MySQL and MongoDB</strong>.
                     </p>
                     <p className='text-sm md:text-base xl:text-lg py-2 text-gray-600 max-w-[70%] m-auto'>
                         I am a <strong>quick learner</strong>, a <strong>problem solver</strong>, and a <strong>dedicated team player</strong> who thrives in a collaborative environment.

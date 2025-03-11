@@ -24,8 +24,8 @@ export default function Projects() {
 
 					<ProjectItem title='Ecommerce App' image={ecommerce} skills='React - Node - Express - MongoDB' projectUrl='/ecommerce' />
 					<ProjectItem title='Titanic Predictor Game' image={TitanicGame} skills='Python - Scikit-learn - Numpy - Pandas - SHAP - Machine Learning' projectUrl='/titanicGame' />
-					<ProjectItem title='Company Web' image={CompanyWebImg} skills='Next - Tailwind' projectUrl='/companyWeb' />
 					<ProjectItem title='Renting Web' image={RentingWeb} skills='React - SASS' projectUrl='/rentingWeb' />
+					<ProjectItem title='Company Web' image={CompanyWebImg} skills='Next - Tailwind' projectUrl='/companyWeb' />
 					<ProjectItem title='Upcomings Page' image={upcomings} skills='React and Bootstrap' projectUrl='/upcomings' />
 					<ProjectItem title='Spotify Clone' image={spotifyClone} skills='Angular and Node' projectUrl='/spotifyClone' />
 					<ProjectItem title='Price Tracker' image={pricetracker} skills='Next - Tailwind - Node - MongoDB' projectUrl='/pricetracker' />

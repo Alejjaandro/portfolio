@@ -29,6 +29,7 @@ export default function ecommerce() {
                             <li className='m-1 cursor-auto'>Complete user management with registration and login functionalities, and update of user account info.</li>
                             <li className='m-1 cursor-auto'>CRUD operations on multiple models.</li>
                             <li className='m-1 cursor-auto'>Implementation of a REST API to facilitate communication between different parts of the application.</li>
+                            <li className='m-1 cursor-auto'>Complex state management.</li>
                         </ul>
                     </div>
                     <p className='mt-4'>
