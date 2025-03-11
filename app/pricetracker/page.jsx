@@ -1,7 +1,7 @@
 import React from 'react'
 
 import PriceTracker from '../../public/assets/projects/pricetracker.png'
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { RiRadioButtonFill } from 'react-icons/ri'

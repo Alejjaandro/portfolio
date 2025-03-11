@@ -1,7 +1,7 @@
 import React from 'react'
 
 import spotifyClone from '../../public/assets/projects/spotifyClone.png'
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { RiRadioButtonFill } from 'react-icons/ri'
