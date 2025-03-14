@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 export default function Main() {
     return (
-        <div id='home' className='w-full h-screen text-center pt-24'>
+        <div id='home' className='w-full h-screen text-center pt-24 dark:bg-gray-800'>
             <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
                 <div>
                     <h1 className='text-2xl md:text-2xl lg:text-3xl xl:text-4xl py-4 text-gray-700'>
@@ -34,18 +34,18 @@ export default function Main() {
 
                     <div className='flex items-center justify-around max-w-[330px] m-auto py-6'>
                         <a href='https://www.linkedin.com/in/alejandro-olaso-fullstackweb/' target='_blank' rel='noreferrer'>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 dark:bg-white'>
                                 <FaLinkedinIn />
                             </div>
                         </a>
                         <a href='https://github.com/Alejjaandro' target='_blank' rel='noreferrer'>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 dark:bg-white'>
                                 <FaGithub />
                             </div>
                         </a>
 
                         <a href="/#sendEmail">
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 dark:bg-white'>
                                 <AiOutlineMail />
                             </div>
                         </a>

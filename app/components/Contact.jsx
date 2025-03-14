@@ -32,11 +32,11 @@ export default function Contact() {
                 <p className='text-xl tracking-widest uppercase text-[#5651e5]'>
                     Contact
                 </p>
-                <h2 className='py-4'>Get In Touch</h2>
-                <div className='grid lg:grid-cols-5 gap-8'>
+                <h2 className='py-4 dark:text-gray-700'>Get In Touch</h2>
+                <div className='grid lg:grid-cols-5 gap-8 dark:text-gray-700'>
 
                     {/* ===== LEFT SIDE ===== */}
-                    <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
+                    <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4 dark:bg-blue-950 dark:shadow-cyan-950'>
                         <div className='lg:p-4 h-full '>
                             <div>
                                 <Image className='rounded-xl hover:scale-105 ease-in duration-300' src={ContactImg} alt='/' />
@@ -71,7 +71,7 @@ export default function Contact() {
                     </div>
 
                     {/* ===== Right Side ===== */}
-                    <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
+                    <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4 dark:bg-blue-950 dark:shadow-cyan-950'>
                         <div className='p-4'>
                             <form id='sendEmail' ref={form} onSubmit={(e) => sendEmail(e)} encType='multipart/form-data'>
 
@@ -113,7 +113,7 @@ export default function Contact() {
 
                 <div className='flex justify-center py-12'>
                     <Link href='/'>
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                        <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:bg-white'>
                             <HiOutlineChevronDoubleUp className='text-violet-600' size={30} />
                         </div>
                     </Link>
