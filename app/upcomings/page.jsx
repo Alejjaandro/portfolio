@@ -39,7 +39,7 @@ export default function upcomings() {
                     <a href='https://github.com/Alejjaandro/upcomigs' target='_blank' rel='noreferrer'>
                         <button className='px-8 py-2 mt-4 mr-8'>Code</button>
                     </a>
-                    <a href='https://alejjaandro-upcomings-project.netlify.app' target='_blank' rel='noreferrer' >
+                    <a href='https://upcomigs.vercel.app/' target='_blank' rel='noreferrer' >
                         <button className='px-8 py-2 mt-4'>Demo</button>
                     </a>
                 </div>
