@@ -10,7 +10,7 @@ export default function ProjectItem({title, image, skills, projectUrl}) {
                 <h3 className='text-2xl text-white tracking-wider text-center'>{title}</h3>
                 <p className='pb-4 pt-2 text-white text-center'>{skills}</p>
                 <Link href={projectUrl}>
-                    <p className='text-center py-3 rounded-lg bg-white text-white font-bold text-lg cursor-pointer dark:bg-violet-600'>More Info</p>
+                    <p className='text-center py-3 rounded-lg bg-white font-bold text-lg cursor-pointer dark:bg-violet-600 dark:text-white'>More Info</p>
                 </Link>
             </div>
         </div>

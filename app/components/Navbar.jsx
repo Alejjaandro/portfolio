@@ -26,7 +26,7 @@ export default function Navbar() {
     const handleSideNavbar = () => setSideNavbar(!sideNavbar)
 
     return (
-        <div className={shadow ? "fixed w-full h-20 shadow-xl z-100 dark:bg-gray-800 dark:shadow-gray-700" : "fixed w-full h-20 z-100"}>
+        <div className={shadow ? "fixed w-full h-20 shadow-xl z-100 bg-white dark:bg-gray-800 dark:shadow-gray-700" : "fixed w-full h-20 z-100"}>
             <div className="flex justify-around items-center w-full h-full px-2 2xl:px-16">
                 <ul className="hidden md:flex dark:text-white">
                     <a href='/'>
