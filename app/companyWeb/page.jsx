@@ -17,9 +17,9 @@ export default function ecommerce() {
                     <h3>Next JS / Tailwind CSS</h3>
                 </div>
             </div>
-            <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8'>
+            <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8 dark:text-gray-300'>
                 <div className='col-span-4'>
-                    <p className='uppercase text-violet-600'>Company Web</p>
+                    <p className='uppercase text-violet-600 dark:text-violet-500'>Company Web</p>
                     <h2 className='my-2'>Overview</h2>
                     <div className='my-2'>
                         This is a single-page application project for a company. It&apos;s built with Next JS and Tailwind CSS.
@@ -36,30 +36,30 @@ export default function ecommerce() {
                         The website presents a sleek, modern interface with a clean, corporate aesthetic that conveys the company&apos;s commitment to professionalism and quality.
                     </p>
                     <a href='https://github.com/Alejjaandro/CompanyWeb' target='_blank' rel='noreferrer'>
-                        <button className='px-8 py-2 mt-4 mr-8'>Code</button>
+                        <button className='px-8 py-2 mt-4 mr-8 dark:bg-violet-950'>Code</button>
                     </a>
                     <a href='https://alejjaandro-company-web.vercel.app' target='_blank' rel='noreferrer' >
-                        <button className='px-8 py-2 mt-4'>Demo</button>
+                        <button className='px-8 py-2 mt-4 dark:bg-violet-950'>Demo</button>
                     </a>
                 </div>
-                <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4'>
+                <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4 dark:bg-violet-950 dark:shadow-gray-900'>
                     <div className='p-2'>
                         <p className='text-center font-bold pb-2'>Technologies</p>
                         <div className='grid grid-cols-3 md:grid-cols-1'>
-                            <p className='text-gray-600 py-2 flex items-center'>
+                            <p className='text-gray-600 py-2 flex items-center dark:text-gray-300'>
                                 <RiRadioButtonFill className='pr-1' /> Next JS
                             </p>
-                            <p className='text-gray-600 py-2 flex items-center'>
+                            <p className='text-gray-600 py-2 flex items-center dark:text-gray-300'>
                                 <RiRadioButtonFill className='pr-1' /> Tailwind CSS
                             </p>
-                            <p className='text-gray-600 py-2 flex items-center'>
+                            <p className='text-gray-600 py-2 flex items-center dark:text-gray-300'>
                                 <RiRadioButtonFill className='pr-1' /> JavaScript
                             </p>
                         </div>
                     </div>
                 </div>
                 <Link href='/#projects'>
-                    <p className='underline cursor-pointer'>Back</p>
+                    <p className='underline cursor-pointer dark:text-white'>Back</p>
                 </Link>
             </div>
         </div>

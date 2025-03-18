@@ -18,9 +18,9 @@ export default function upcomings() {
                 </div>
             </div>
 
-            <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8'>
+            <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8 dark:text-gray-300'>
                 <div className='col-span-4'>
-                    <p className='uppercase text-violet-600'>Titanic Predictor Game</p>
+                    <p className='uppercase text-violet-600 dark:text-violet-500'>Titanic Predictor Game</p>
                     <h2 className='my-2'>Overview</h2>
                     <div className='my-2'>
                     This project is a Python-based application that predicts the survival of a fictional passenger aboard the Titanic based on user-provided characteristics.
@@ -33,30 +33,30 @@ export default function upcomings() {
                         </ul>
                     </div>
                     <a href='https://github.com/Alejjaandro/machine_learning_supervised_learning' target='_blank' rel='noreferrer'>
-                        <button className='px-8 py-2 mt-4 mr-8'>Code</button>
+                        <button className='px-8 py-2 mt-4 mr-8 dark:bg-violet-950'>Code</button>
                     </a>
                 </div>
 
-                <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4'>
+                <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4 dark:bg-violet-950 dark:shadow-gray-900'>
                     <div className='p-2'>
                         <p className='text-center font-bold pb-2'>Technologies</p>
                         <div className='grid grid-cols-3 md:grid-cols-1'>
-                            <p className='text-gray-600 py-2 flex items-center'>
+                            <p className='text-gray-600 py-2 flex items-center dark:text-gray-300'>
                                 <RiRadioButtonFill className='pr-1' /> Python
                             </p>
-                            <p className='text-gray-600 py-2 flex items-center'>
+                            <p className='text-gray-600 py-2 flex items-center dark:text-gray-300'>
                                 <RiRadioButtonFill className='pr-1' /> Scikit-learn
                             </p>
-                            <p className='text-gray-600 py-2 flex items-center'>
+                            <p className='text-gray-600 py-2 flex items-center dark:text-gray-300'>
                                 <RiRadioButtonFill className='pr-1' /> Numpy
                             </p>
-                            <p className='text-gray-600 py-2 flex items-center'>
+                            <p className='text-gray-600 py-2 flex items-center dark:text-gray-300'>
                                 <RiRadioButtonFill className='pr-1' /> Pandas
                             </p>
-                            <p className='text-gray-600 py-2 flex items-center'>
+                            <p className='text-gray-600 py-2 flex items-center dark:text-gray-300'>
                                 <RiRadioButtonFill className='pr-1' /> Machine Learning
                             </p>
-                            <p className='text-gray-600 py-2 flex items-center'>
+                            <p className='text-gray-600 py-2 flex items-center dark:text-gray-300'>
                                 <RiRadioButtonFill className='pr-1' /> TKinter
                             </p>
                         </div>

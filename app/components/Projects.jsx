@@ -17,8 +17,8 @@ export default function Projects() {
 		<div id='projects' className='w-full'>
 			<div className='max-w-[1440px] mx-auto px-2 py-24'>
 
-				<p className='text-xl tracking-widest uppercase text-violet-600'>Projects</p>
-				<h2 className='py-4 dark:text-gray-700'>{"What I've Built"}</h2>
+				<p className='text-xl tracking-widest uppercase text-violet-600 dark:text-violet-400'>Projects</p>
+				<h2 className='py-4 dark:text-white'>{"What I've Built"}</h2>
 
 				<div className='grid md:grid-cols-2 gap-8'>
 

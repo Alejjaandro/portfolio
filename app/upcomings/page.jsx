@@ -18,15 +18,15 @@ export default function upcomings() {
                 </div>
             </div>
 
-            <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8'>
+            <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8 dark:text-gray-300'>
                 <div className='col-span-4'>
-                    <p className='uppercase text-violet-600'>Upcoming Movies Web</p>
+                    <p className='uppercase text-violet-600 dark:text-violet-500'>Upcoming Movies Web</p>
                     <h2 className='my-2'>Overview</h2>
                     <div className='my-2'>
                         <p className='my-2'>
                             This is a web that shows the latest Upcoming Movies.
                             The movies are fetch from a public API from
-                            <span> <a href="https://www.themoviedb.org/" className='underline text-purple-600' target='_blank'>The Movie DB</a> </span>
+                            <span> <a href="https://www.themoviedb.org/" className='underline text-violet-600 dark:text-violet-500' target='_blank'>The Movie DB</a> </span>
                         </p>
                         <p className='my-2'>
                             The API responds with differents movies depending on the page fetched, so I implemented a pagination functionality
@@ -37,23 +37,23 @@ export default function upcomings() {
                         </p>              
                     </div>
                     <a href='https://github.com/Alejjaandro/upcomigs' target='_blank' rel='noreferrer'>
-                        <button className='px-8 py-2 mt-4 mr-8'>Code</button>
+                        <button className='px-8 py-2 mt-4 mr-8 dark:bg-violet-950'>Code</button>
                     </a>
                     <a href='https://upcomigs.vercel.app/' target='_blank' rel='noreferrer' >
-                        <button className='px-8 py-2 mt-4'>Demo</button>
+                        <button className='px-8 py-2 mt-4 dark:bg-violet-950'>Demo</button>
                     </a>
                 </div>
-                <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4'>
+                <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4 dark:bg-violet-950 dark:shadow-gray-900'>
                     <div className='p-2'>
                         <p className='text-center font-bold pb-2'>Technologies</p>
                         <div className='grid grid-cols-3 md:grid-cols-1'>
-                            <p className='text-gray-600 py-2 flex items-center'>
+                            <p className='text-gray-600 py-2 flex items-center dark:text-gray-300'>
                                 <RiRadioButtonFill className='pr-1' /> React
                             </p>
-                            <p className='text-gray-600 py-2 flex items-center'>
+                            <p className='text-gray-600 py-2 flex items-center dark:text-gray-300'>
                                 <RiRadioButtonFill className='pr-1' /> JavaScript
                             </p>
-                            <p className='text-gray-600 py-2 flex items-center'>
+                            <p className='text-gray-600 py-2 flex items-center dark:text-gray-300'>
                                 <RiRadioButtonFill className='pr-1' /> Bootstrap
                             </p>
                         </div>
