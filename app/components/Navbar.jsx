@@ -1,128 +1,145 @@
 'use client'
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { usePathname } from 'next/navigation'
+import ThemeToggle from './ThemeToggle'
+
+const navLinks = [
+  { label: 'Home', href: '/#home' },
+  { label: 'Case Studies', href: '/#experience' },
+  { label: 'Stack', href: '/#skills' },
+  { label: 'Contact', href: '/#contact' },
+]
 
 export default function Navbar() {
+  const [sideNavbar, setSideNavbar] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const path = usePathname()
 
-    const [sideNavbar, setSideNavbar] = useState(false);
-    const [shadow, setShadow] = useState(false);
-    const [navBg, setNavBg] = useState('white');
-    const [linkColor, setLinkColor] = useState('#1f2937');
-    const path = usePathname();
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY >= 20)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
-    useEffect(() => {
-        if (
-            path === '/ecommerce' ||
-            path === '/upcomings' ||
-            path === '/spotifyClone'
-        ) {
-            setNavBg('transparent');
-            setLinkColor('white');
-        } else {
-            setNavBg('white');
-            setLinkColor('#1f2937');
-        }
-    }, [path])
+  useEffect(() => {
+    setSideNavbar(false)
+  }, [path])
 
-    useEffect(() => {
-        const handleShadow = () => {
-            if (window.scrollY >= 90) { setShadow(true) } else { setShadow(false) }
-        };
+  return (
+    <nav
+      className={`fixed w-full z-[100] transition-all duration-300 ${
+        scrolled
+          ? 'bg-surface/80 backdrop-blur-md border-b border-border shadow-sm'
+          : 'bg-transparent'
+      }`}
+    >
+      <div className="flex justify-between items-center w-full h-20 px-6 max-w-[1440px] mx-auto">
+        <a href="/" className="text-lg font-bold tracking-tight text-ink">
+          Alejandro Olaso
+        </a>
 
-        window.addEventListener('scroll', handleShadow);
-    }, [])
+        <div className="hidden md:flex items-center gap-8">
+          <ul className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-sm font-medium text-ink-muted hover:text-accent transition-colors duration-200"
+              >
+                {link.label}
+              </a>
+            ))}
+          </ul>
 
-    const handleSideNavbar = () => setSideNavbar(!sideNavbar)
-
-    return (
-        <div style={{ backgroundColor: `${navBg}` }} className={shadow ? "fixed w-full h-20 shadow-xl z-[100]" : "fixed w-full h-20 z-[100]"}>
-            <div className="flex justify-around items-center w-full h-full px-2 2xl:px-16">
-                <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
-                    <a href='/'>
-                        <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
-                    </a>
-                    {/* <a href='/#about'>
-                        <li className="ml-10 text-sm uppercase hover:border-b">About</li>
-                    </a> */}
-                    <a href='/#skills'>
-                        <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
-                    </a>
-                    <a href='/#projects'>
-                        <li className="ml-10 text-sm uppercase hover:border-b">Projects</li>
-                    </a>
-                    <a href='/#contact'>
-                        <li className="ml-10 text-sm uppercase hover:border-b">Contact</li>
-                    </a>
-                </ul>
-                <div onClick={handleSideNavbar} className="md:hidden">
-                    <AiOutlineMenu size={25} />
-                </div>
-            </div>
-
-            {/* ===== SIDE NAVBAR ===== */}
-            <div className={sideNavbar ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""}>
-                <div className={
-                    sideNavbar
-                        ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white p-10 ease-in duration-500"
-                        : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
-                }>
-                    <div className="flex w-full items-center justify-end">
-                        <div onClick={handleSideNavbar} className="rounded-full shadow-lg shadow-gray-400 cursor-pointer p-4">
-                            <AiOutlineClose size={25} />
-                        </div>
-                    </div>
-
-                    <div className="border-b border-gray-300 my-4">
-                        <h3 className="py-2 text-xl">Alejandro Olaso</h3>
-                        <p className="py-2">Full Stack Developer</p>
-                    </div>
-
-                    <div className="py-4 flex flex-col">
-                        <ul className="uppercase">
-                            <a href='/'>
-                                <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>Home</li>
-                            </a>
-                            {/* <a href='/#about'>
-                                <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>About</li>
-                            </a> */}
-                            <a href='/#skills'>
-                                <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>Skills</li>
-                            </a>
-                            <a href='/#projects'>
-                                <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>Projects</li>
-                            </a>
-                            <a href='/#contact'>
-                                <li className="py-4 text-sm hover:border-b" onClick={() => setSideNavbar(false)}>Contact</li>
-                            </a>
-                        </ul>
-
-                        <div className="pt-40">
-                            <p className="uppercase tracking-widest text-violet-600 mb-4">{"Let's Connect"}</p>
-                            <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                                <a href='https://www.linkedin.com/in/alejandro-olaso-fullstackweb/' target='_blank' rel='noreferrer'>
-                                    <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-150'>
-                                        <FaLinkedinIn />
-                                    </div>
-                                </a>
-                                <a href='https://github.com/Alejjaandro' target='_blank' rel='noreferrer'>
-                                    <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-150'>
-                                        <FaGithub />
-                                    </div>
-                                </a>
-
-                                <a href="/#sendEmail">
-                                    <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-150'>
-                                        <AiOutlineMail />
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div className="flex items-center gap-4 pl-4 border-l border-border">
+            <a
+              href="https://github.com/Alejjaandro"
+              target="_blank"
+              rel="noreferrer"
+              className="text-ink-muted hover:text-accent transition-colors"
+              aria-label="GitHub"
+            >
+              <FaGithub size={18} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/alejandro-olaso-fullstackweb/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-ink-muted hover:text-accent transition-colors"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn size={18} />
+            </a>
+            <a
+              href="mailto:alejandroolasofullstack@gmail.com"
+              className="text-ink-muted hover:text-accent transition-colors"
+              aria-label="Email"
+            >
+              <AiOutlineMail size={18} />
+            </a>
+            <ThemeToggle />
+          </div>
         </div>
-    );
+
+        <div className="flex items-center gap-4 md:hidden">
+          <ThemeToggle />
+          <button
+            onClick={() => setSideNavbar(!sideNavbar)}
+            className="p-2 text-ink-muted"
+            aria-label="Toggle menu"
+          >
+            {sideNavbar ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      <div
+        className={`md:hidden fixed inset-0 bg-surface z-[90] transition-transform duration-300 ${
+          sideNavbar ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="flex flex-col items-center justify-center h-full gap-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={() => setSideNavbar(false)}
+              className="text-2xl font-medium text-ink hover:text-accent transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+
+          <div className="flex items-center gap-6 pt-8">
+            <a
+              href="https://github.com/Alejjaandro"
+              target="_blank"
+              rel="noreferrer"
+              className="text-ink-muted hover:text-accent transition-colors"
+            >
+              <FaGithub size={24} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/alejandro-olaso-fullstackweb/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-ink-muted hover:text-accent transition-colors"
+            >
+              <FaLinkedinIn size={24} />
+            </a>
+            <a
+              href="mailto:alejandroolasofullstack@gmail.com"
+              className="text-ink-muted hover:text-accent transition-colors"
+            >
+              <AiOutlineMail size={24} />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  )
 }

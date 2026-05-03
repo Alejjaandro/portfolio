@@ -2,34 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --surface: #f7f6f3;
+  --surface-raised: #ffffff;
+  --surface-elevated: #ffffff;
+  --ink: #0f172a;
+  --ink-muted: #334155;
+  --ink-faint: #64748b;
+  --accent: #0ea5e9;
+  --accent-soft: #e0f2fe;
+  --border: #e2e8f0;
+}
+
+.dark {
+  --surface: #0b1117;
+  --surface-raised: #111a24;
+  --surface-elevated: #16202e;
+  --ink: #e6edf3;
+  --ink-muted: #94a3b8;
+  --ink-faint: #64748b;
+  --accent: #38bdf8;
+  --accent-soft: #0c4a6e;
+  --border: #1e293b;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 @layer base {
   body {
-    @apply text-black tracking-wide
+    @apply bg-surface text-ink tracking-wide transition-colors duration-300;
+    font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
   }
 
-  h1,h2,h3,h4 {
-    @apply font-bold
+  h1, h2, h3, h4 {
+    @apply font-bold;
+    font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
   }
 
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl
+    @apply text-4xl sm:text-5xl md:text-6xl;
   }
-  h1 {
-    @apply text-4xl sm:text-4xl
+
+  h2 {
+    @apply text-3xl sm:text-4xl;
   }
+
   li {
-    @apply cursor-pointer
+    @apply cursor-pointer;
   }
+
   button {
-    @apply shadow-xl 
-    shadow-gray-400 
-    rounded-xl 
-    uppercase 
-    bg-gradient-to-r from-[#5651e5] to-[#709dff] 
-    text-white
+    @apply shadow-md
+      shadow-gray-400/30
+      rounded-lg
+      uppercase
+      bg-accent
+      text-white
+      transition-all
+      duration-200
+      hover:shadow-lg
+      hover:-translate-y-0.5;
   }
 }

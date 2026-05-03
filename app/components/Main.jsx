@@ -1,57 +1,69 @@
 import React from 'react'
 import { AiOutlineMail } from 'react-icons/ai'
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
+
+const stats = [
+  { value: '2 yrs', label: 'Full-stack production experience' },
+  { value: '3+', label: 'Professional platforms shipped' },
+  { value: '8+', label: 'Marketplaces integrated' },
+  { value: 'AI/RAG', label: 'Vector database assistant architecture' },
+]
 
 export default function Main() {
-    return (
-        <div id='home' className='w-full h-screen text-center pt-24'>
-            <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
-                <div>
-                    <h1 className='text-2xl md:text-2xl lg:text-3xl xl:text-4xl py-4 text-gray-700'>
-                        {"Hi, I'm "}<span className='text-violet-600'>Alejandro</span>
-                    </h1>
-                    <h1 className='text-2xl md:text-2xl lg:text-3xl xl:text-4xl py-2 text-gray-700'>
-                        A Full Stack Web Developer
-                    </h1>
-                    <p className='hidden md:inline-block xl:text-lg py-4 text-gray-600 max-w-[70%] m-auto'>
-                        {"I'm "} a Junior <strong>Full Stack Developer</strong> passionate about creating dynamic and user-friendly web applications.
-                    </p>
-                    <p className='text-sm md:text-base xl:text-lg py-2 text-gray-600 max-w-[70%] m-auto'>
-                        With a solid foundation in both front-end and back-end development, I have hands-on experience with technologies such as <strong>JavaScript, PHP and Python</strong>, and have worked with frameworks like <strong>React, Node.js, Laravel, Angular, Tailwind and Bootstrap</strong>. 
-                        I am also proficient in database design and implementation, mainly with <strong>MySQL and MongoDB</strong>.
-                    </p>
-                    <p className='text-sm md:text-base xl:text-lg py-2 text-gray-600 max-w-[70%] m-auto'>
-                        I am a <strong>quick learner</strong>, a <strong>problem solver</strong>, and a <strong>dedicated team player</strong> who thrives in a collaborative environment.
-                    </p>
-                    <p className='hidden md:inline-block xl:text-lg py-2 text-gray-600 max-w-[70%] m-auto'>
-                        My goal is to continuously expand my knowledge and take on new challenges to help build innovative and efficient web solutions. I am eager to contribute my skills to your team and grow as a Full Stack Developer.
-                    </p>
-                    <p>
-                        <a href="#projects" className="xl:text-lg py-2 text-violet-600 underline cursor-pointer">
-                            Checkout my lastest projects
-                        </a>
-                    </p>
+  return (
+    <section id="home" className="w-full min-h-screen flex items-center pt-20">
+      <div className="max-w-[1240px] w-full mx-auto px-6 py-24">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-4">
+            Full-Stack Developer · Angular · Node.js · Cloud · AI
+          </p>
 
-                    <div className='flex items-center justify-around max-w-[330px] m-auto py-6'>
-                        <a href='https://www.linkedin.com/in/alejandro-olaso-fullstackweb/' target='_blank' rel='noreferrer'>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                <FaLinkedinIn />
-                            </div>
-                        </a>
-                        <a href='https://github.com/Alejjaandro' target='_blank' rel='noreferrer'>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                <FaGithub />
-                            </div>
-                        </a>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-ink leading-[1.1] tracking-tight">
+            Alejandro
+            <br />
+            <span className="text-ink-muted">Olaso</span>
+          </h1>
 
-                        <a href="/#sendEmail">
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                <AiOutlineMail />
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
+          <p className="mt-8 text-lg md:text-xl text-ink-muted leading-relaxed max-w-2xl">
+            I build business-critical systems that connect frontend, backend, databases and external services.
+            Specialized in <strong className="text-ink">Angular</strong>, <strong className="text-ink">Node.js</strong>,{' '}
+            <strong className="text-ink">B2B platforms</strong>, <strong className="text-ink">automotive e-commerce</strong> and{' '}
+            <strong className="text-ink">data automation</strong>.
+          </p>
+
+          <p className="mt-5 text-base md:text-lg text-ink-muted leading-relaxed max-w-2xl">
+            I have worked on <strong className="text-ink">production platforms</strong> involving{' '}
+            <strong className="text-ink">ERP integrations</strong>, TecDoc/TecAlliance data, JWT authentication,
+            <strong className="text-ink"> CI/CD pipelines</strong>,{' '}
+            <strong className="text-ink">Google Cloud Run deployments</strong>, ETL workflows and AI assistants powered by{' '}
+            <strong className="text-ink">RAG architectures with Pinecone</strong>.
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a
+              href="#experience"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-white font-semibold hover:bg-accent/90 transition-colors shadow-lg shadow-accent/20"
+            >
+              View Case Studies
+            </a>
+            <a
+              href="mailto:alejandroolasofullstack@gmail.com"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-ink-muted font-semibold hover:border-accent hover:text-accent transition-colors"
+            >
+              <AiOutlineMail />
+              Get in Touch
+            </a>
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {stats.map((stat, i) => (
+              <div key={i} className="border-l-2 border-accent pl-6">
+                <p className="text-3xl font-bold text-ink">{stat.value}</p>
+                <p className="text-sm text-ink-faint mt-1">{stat.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
-    )
+      </div>
+    </section>
+  )
 }

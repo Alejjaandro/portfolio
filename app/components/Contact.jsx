@@ -1,125 +1,78 @@
-'use client'
-
-import Image from "next/legacy/image"
-import React, { useRef } from 'react'
-import ContactImg from '../../public/assets/contact.jpg'
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
+import React from 'react'
 import { AiOutlineMail } from 'react-icons/ai'
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi'
 import Link from 'next/link'
 
-import emailjs from '@emailjs/browser';
-
 export default function Contact() {
-
-    const form = useRef();
-
-    const sendEmail = async (e) => {
-        e.preventDefault();
-
-        await emailjs.sendForm('service_xtxok5v', 'template_tzc9ngf', form.current, 'tPAK-DucuXSK5CXYb')
-        .then((result) => {
-            console.log(result.text);
-            alert('Email sent');
-            form.current.reset();
-        }, (error) => {console.log(error.text)});
-
-    };
-
-    return (
-        <div id='contact' className='w-full'>
-            <div className='max-w-[1440px] m-auto px-2 py-24 w-full '>
-                <p className='text-xl tracking-widest uppercase text-[#5651e5]'>
-                    Contact
-                </p>
-                <h2 className='py-4'>Get In Touch</h2>
-                <div className='grid lg:grid-cols-5 gap-8'>
-
-                    {/* ===== LEFT SIDE ===== */}
-                    <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
-                        <div className='lg:p-4 h-full '>
-                            <div>
-                                <Image className='rounded-xl hover:scale-105 ease-in duration-300' src={ContactImg} alt='/' />
-                            </div>
-                            <div>
-                                <h2 className='py-4'>Alejandro Olaso</h2>
-                                <p>Full Stack Developer</p>
-                                <p className='py-4'>
-                                    I am open to any offer. Contact me and let&apos;s talk.
-                                </p>
-                            </div>
-                            <div>
-                                <p className='uppercase pt-8'>Connect With Me</p>
-                                <div className='flex items-center justify-between py-4'>
-                                    <a href='https://www.linkedin.com/in/alejandro-olaso-fullstackweb/' target='_blank' rel='noreferrer'>
-                                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                            <FaLinkedinIn />
-                                        </div>
-                                    </a>
-                                    <a href='https://github.com/Alejjaandro' target='_blank' rel='noreferrer'>
-                                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                            <FaGithub />
-                                        </div>
-                                    </a>
-
-                                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                        <AiOutlineMail />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* ===== Right Side ===== */}
-                    <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
-                        <div className='p-4'>
-                            <form id='sendEmail' ref={form} onSubmit={(e) => sendEmail(e)} encType='multipart/form-data'>
-
-                                <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
-
-                                    <div className='flex flex-col'>
-                                        <label className='uppercase text-sm py-2'>Name</label>
-                                        <input className='border-2 rounded-lg p-3 flex border-gray-300' type='text' name='user_name' required />
-                                    </div>
-                                    <div className='flex flex-col'>
-                                        <label className='uppercase text-sm py-2'>Phone Number</label>
-                                        <input className='border-2 rounded-lg p-3 flex border-gray-300' type='number' name='user_phone' required />
-                                    </div>
-                                </div>
-                                <div className='flex flex-col py-2'>
-                                    <label className='uppercase text-sm py-2'>Email</label>
-                                    <input className='border-2 rounded-lg p-3 flex border-gray-300' type='email' name='user_email' required />
-                                </div>
-                                <div className='flex flex-col py-2'>
-                                    <label className='uppercase text-sm py-2'>Subject</label>
-                                    <input className='border-2 rounded-lg p-3 flex border-gray-300' type='text' name='user_subject' required />
-                                </div>
-                                <div className='flex flex-col py-2'>
-                                    <label className='uppercase text-sm py-2'>Message</label>
-                                    <textarea className='border-2 rounded-lg p-3 border-gray-300' rows='10' name='message' required />
-                                </div>
-
-                                {/* formsubmit options */}
-                                <input type="hidden" name="_template" value="table"></input>
-                                <input type="hidden" name="_next" value="http://localhost:3000/#contact"></input>
-
-                                <button className='w-full p-4 text-gray-100 mt-4'>Send Message</button>
-
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div className='flex justify-center py-12'>
-                    <Link href='/'>
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <HiOutlineChevronDoubleUp className='text-violet-600' size={30} />
-                        </div>
-                    </Link>
-                </div>
-
-            </div>
+  return (
+    <section id="contact" className="w-full">
+      <div className="max-w-[1240px] mx-auto px-6 py-24">
+        <div className="max-w-2xl mb-16">
+          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-4">
+            Contact
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-ink tracking-tight">
+            Let&apos;s work together
+          </h2>
+          <p className="mt-4 text-lg text-ink-muted leading-relaxed">
+            I am open to new opportunities, freelance projects and collaborations. Feel free to reach out.
+          </p>
         </div>
-    )
+
+        <div className="grid md:grid-cols-3 gap-6">
+          <a
+            href="mailto:alejandroolasofullstack@gmail.com"
+            className="group flex flex-col items-start bg-surface-raised border border-border rounded-xl p-8 hover:border-accent/20 transition-all duration-300"
+          >
+            <div className="w-12 h-12 rounded-lg bg-accent-soft flex items-center justify-center mb-4">
+              <AiOutlineMail className="text-accent" size={24} />
+            </div>
+            <h3 className="text-lg font-semibold text-ink mb-1">Email</h3>
+            <p className="text-sm text-ink-muted group-hover:text-accent transition-colors">
+              alejandroolasofullstack@gmail.com
+            </p>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/alejandro-olaso-fullstackweb/"
+            target="_blank"
+            rel="noreferrer"
+            className="group flex flex-col items-start bg-surface-raised border border-border rounded-xl p-8 hover:border-accent/20 transition-all duration-300"
+          >
+            <div className="w-12 h-12 rounded-lg bg-accent-soft flex items-center justify-center mb-4">
+              <FaLinkedinIn className="text-accent" size={24} />
+            </div>
+            <h3 className="text-lg font-semibold text-ink mb-1">LinkedIn</h3>
+            <p className="text-sm text-ink-muted group-hover:text-accent transition-colors">
+              alejandro-olaso-fullstackweb
+            </p>
+          </a>
+
+          <a
+            href="https://github.com/Alejjaandro"
+            target="_blank"
+            rel="noreferrer"
+            className="group flex flex-col items-start bg-surface-raised border border-border rounded-xl p-8 hover:border-accent/20 transition-all duration-300"
+          >
+            <div className="w-12 h-12 rounded-lg bg-accent-soft flex items-center justify-center mb-4">
+              <FaGithub className="text-accent" size={24} />
+            </div>
+            <h3 className="text-lg font-semibold text-ink mb-1">GitHub</h3>
+            <p className="text-sm text-ink-muted group-hover:text-accent transition-colors">
+              @Alejjaandro
+            </p>
+          </a>
+        </div>
+
+        <div className="flex justify-center pt-20">
+          <Link href="/">
+            <div className="rounded-full border border-border p-4 cursor-pointer hover:border-accent hover:text-accent transition-colors">
+              <HiOutlineChevronDoubleUp className="text-ink-muted" size={24} />
+            </div>
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
 }

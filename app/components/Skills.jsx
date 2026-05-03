@@ -1,53 +1,118 @@
 import React from 'react'
-import SkillCard from './SkillCard'
 
-import HTML from '../../public/assets/skills/html.png'
-import CSS from '../../public/assets/skills/css.png'
-import JS from '../../public/assets/skills/javascript.png'
-import ReactJS from '../../public/assets/skills/react.png'
-import Angular from '../../public/assets/skills/angular.png'
-import NextJS from '../../public/assets/skills/nextjs.png'
-import Node from '../../public/assets/skills/node.png'
-import Mongo from '../../public/assets/skills/mongo.png'
-import MySQL from '../../public/assets/skills/mysql.png'
-import Tailwind from '../../public/assets/skills/tailwind.png'
-import GitHub from '../../public/assets/skills/github.png'
-import Python from '../../public/assets/skills/python.png'
-import Django from '../../public/assets/skills/django.png'
-import PHP from '../../public/assets/skills/php.png'
-import Laravel from '../../public/assets/skills/laravel.png'
-import Bootstrap from '../../public/assets/skills/bootstrap.png'
-
+const skillGroups = [
+  {
+    category: 'Frontend',
+    items: [
+      'Angular 18 / 20',
+      'Angular Signals',
+      'RxJS',
+      'TypeScript',
+      'React',
+      'Next.js',
+      'Tailwind CSS',
+      'Bootstrap',
+    ],
+  },
+  {
+    category: 'Backend',
+    items: [
+      'Node.js',
+      'FeathersJS',
+      'Express',
+      'REST APIs',
+      'Socket.IO',
+      'JWT Auth',
+      'TypeBox',
+      'Knex.js',
+    ],
+  },
+  {
+    category: 'Databases',
+    items: [
+      'MySQL',
+      'MSSQL',
+      'MongoDB',
+      'PrestaShop data model',
+    ],
+  },
+  {
+    category: 'Integrations',
+    items: [
+      'TecDoc / TecAlliance',
+      'ERP integrations',
+      'SOAP / REST',
+      'AWS S3',
+      'FTP / SFTP',
+    ],
+  },
+  {
+    category: 'Data & AI',
+    items: [
+      'ETL pipelines',
+      'Batch processing',
+      'Gemini',
+      'Pinecone',
+      'RAG architecture',
+      'Vector databases',
+      'NLP',
+      'Prompt engineering',
+    ],
+  },
+  {
+    category: 'DevOps',
+    items: [
+      'Docker',
+      'Docker Compose',
+      'Google Cloud Run',
+      'CI/CD',
+      'Container deployments',
+      'Winston logging',
+      'Environment configuration',
+      'Git',
+    ],
+  },
+]
 
 export default function Skills() {
-    return (
-        <div id='skills' className='w-full px-2 py-24'>
-
-            <div className='max-w-[1440px] mx-auto flex flex-col justify-center h-full'>
-                <p className='uppercase text-xl tracking-widest text-violet-600'>Skills</p>
-                <h2 className='py-4'>What I Know</h2>
-
-                <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-
-                    <SkillCard image={JS} skill='JavaScript'/>
-                    <SkillCard image={PHP} skill='PHP'/>
-                    <SkillCard image={Python} skill='Python'/>
-                    <SkillCard image={ReactJS} skill='ReactJS'/>
-                    <SkillCard image={Laravel} skill='Laravel'/>
-                    <SkillCard image={NextJS} skill='NextJS'/>
-                    <SkillCard image={Angular} skill='Angular'/>
-                    <SkillCard image={Node} skill='NodeJS'/>
-                    <SkillCard image={Tailwind} skill='TailwindCSS'/>
-                    <SkillCard image={Bootstrap} skill='Bootstrap'/>
-                    <SkillCard image={Mongo} skill='MongoDB'/>
-                    <SkillCard image={MySQL} skill='MySQL'/>
-                    <SkillCard image={CSS} skill='CSS'/>
-                    <SkillCard image={HTML} skill='HTML'/>
-                    <SkillCard image={GitHub} skill='GitHub'/>
-
-                </div>
-
-            </div>
+  return (
+    <section id="skills" className="w-full">
+      <div className="max-w-[1240px] mx-auto px-6 py-24">
+        <div className="max-w-2xl mb-16">
+          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-4">
+            Technical Stack
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-ink tracking-tight">
+            Tools & Technologies
+          </h2>
+          <p className="mt-4 text-lg text-ink-muted leading-relaxed">
+            Technologies I use to design, build and ship production-grade systems.
+          </p>
         </div>
-    )
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skillGroups.map((group) => (
+            <div
+              key={group.category}
+              className="bg-surface-raised border border-border rounded-xl p-6 transition-colors hover:border-accent/20"
+            >
+              <h3 className="text-sm font-bold uppercase tracking-wider text-accent mb-4">
+                {group.category}
+              </h3>
+              <ul className="flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <li
+                    key={item}
+                    className="px-3 py-1.5 text-sm text-ink-muted bg-surface border border-border rounded-lg"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }
