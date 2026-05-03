@@ -1,10 +1,10 @@
-import Main from './components/Main'
+import Main from '../components/Main'
 import React from 'react'
-import Experience from './components/Experience'
-import Skills from './components/Skills'
-import TechnicalHighlights from './components/TechnicalHighlights'
-import Contact from './components/Contact'
-import { BASE_URL } from './data/config'
+import Experience from '../components/Experience'
+import Skills from '../components/Skills'
+import TechnicalHighlights from '../components/TechnicalHighlights'
+import Contact from '../components/Contact'
+import { BASE_URL } from '../data/config'
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -12,8 +12,8 @@ const jsonLd = {
   mainEntity: {
     '@type': 'Person',
     name: 'Alejandro Olaso',
-    jobTitle: 'Full-Stack Developer',
-    url: BASE_URL,
+    jobTitle: 'Desarrollador Full-Stack',
+    url: `${BASE_URL}/es`,
     sameAs: [
       'https://www.linkedin.com/in/alejandro-olaso-fullstackweb/',
       'https://github.com/Alejjaandro',
@@ -44,18 +44,18 @@ const jsonLd = {
   },
 }
 
-export default function Home() {
+export default function HomeEs() {
   return (
     <React.Fragment>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
       />
-      <Main locale="en" />
-      <Experience locale="en" />
-      <Skills locale="en" />
-      <TechnicalHighlights locale="en" />
-      <Contact locale="en" />
+      <Main locale="es" />
+      <Experience locale="es" />
+      <Skills locale="es" />
+      <TechnicalHighlights locale="es" />
+      <Contact locale="es" />
     </React.Fragment>
   )
 }

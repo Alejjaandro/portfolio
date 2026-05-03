@@ -5,18 +5,32 @@ import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { usePathname } from 'next/navigation'
 import ThemeToggle from './ThemeToggle'
-
-const navLinks = [
-  { label: 'Home', href: '/#home' },
-  { label: 'Case Studies', href: '/#experience' },
-  { label: 'Stack', href: '/#skills' },
-  { label: 'Contact', href: '/#contact' },
-]
+import LanguageToggle from './LanguageToggle'
+import { ui } from '../data/i18n'
+import { getRoleByAnySlug } from '../data/rolePages'
 
 export default function Navbar() {
   const [sideNavbar, setSideNavbar] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const path = usePathname()
+
+  const isEs = path?.startsWith('/es')
+  const locale = isEs ? 'es' : 'en'
+  const prefix = isEs ? '/es' : ''
+  const t = ui[locale].nav
+
+  // Detectar si estamos en home o en una página de rol (que tienen las mismas secciones)
+  const slug = path?.replace(/^\/es\//, '').replace(/^\//, '') || ''
+  const isRolePage = !!getRoleByAnySlug(slug)
+  const isHome = path === '/' || path === '/es'
+  const useAnchors = isHome || isRolePage
+
+  const navLinks = [
+    { label: t.home, href: useAnchors ? '#home' : `${prefix}/#home` },
+    { label: t.caseStudies, href: useAnchors ? '#experience' : `${prefix}/#experience` },
+    { label: t.stack, href: useAnchors ? '#skills' : `${prefix}/#skills` },
+    { label: t.contact, href: useAnchors ? '#contact' : `${prefix}/#contact` },
+  ]
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY >= 20)
@@ -37,7 +51,7 @@ export default function Navbar() {
       }`}
     >
       <div className="flex justify-between items-center w-full h-20 px-6 max-w-[1440px] mx-auto">
-        <a href="/" className="text-lg font-bold tracking-tight text-ink">
+        <a href={prefix || '/'} className="text-lg font-bold tracking-tight text-ink">
           Alejandro Olaso
         </a>
 
@@ -80,11 +94,13 @@ export default function Navbar() {
             >
               <AiOutlineMail size={18} />
             </a>
+            <LanguageToggle />
             <ThemeToggle />
           </div>
         </div>
 
         <div className="flex items-center gap-4 md:hidden">
+          <LanguageToggle />
           <ThemeToggle />
           <button
             onClick={() => setSideNavbar(!sideNavbar)}

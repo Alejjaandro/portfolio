@@ -3,20 +3,23 @@ import { AiOutlineMail } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi'
 import Link from 'next/link'
+import { ui } from '../data/i18n'
 
-export default function Contact() {
+export default function Contact({ locale = 'en' }) {
+  const t = ui[locale].contact
+
   return (
     <section id="contact" className="w-full">
       <div className="max-w-[1240px] mx-auto px-6 py-24">
         <div className="max-w-2xl mb-16">
           <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-4">
-            Contact
+            {t.sectionLabel}
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-ink tracking-tight">
-            Let&apos;s work together
+            {t.heading}
           </h2>
           <p className="mt-4 text-lg text-ink-muted leading-relaxed">
-            I am open to new opportunities, freelance projects and collaborations. Feel free to reach out.
+            {t.description}
           </p>
         </div>
 
@@ -28,7 +31,7 @@ export default function Contact() {
             <div className="w-12 h-12 rounded-lg bg-accent-soft flex items-center justify-center mb-4">
               <AiOutlineMail className="text-accent" size={24} />
             </div>
-            <h3 className="text-lg font-semibold text-ink mb-1">Email</h3>
+            <h3 className="text-lg font-semibold text-ink mb-1">{t.email}</h3>
             <p className="text-sm text-ink-muted group-hover:text-accent transition-colors">
               alejandroolasofullstack@gmail.com
             </p>
@@ -43,7 +46,7 @@ export default function Contact() {
             <div className="w-12 h-12 rounded-lg bg-accent-soft flex items-center justify-center mb-4">
               <FaLinkedinIn className="text-accent" size={24} />
             </div>
-            <h3 className="text-lg font-semibold text-ink mb-1">LinkedIn</h3>
+            <h3 className="text-lg font-semibold text-ink mb-1">{t.linkedin}</h3>
             <p className="text-sm text-ink-muted group-hover:text-accent transition-colors">
               alejandro-olaso-fullstackweb
             </p>
@@ -58,7 +61,7 @@ export default function Contact() {
             <div className="w-12 h-12 rounded-lg bg-accent-soft flex items-center justify-center mb-4">
               <FaGithub className="text-accent" size={24} />
             </div>
-            <h3 className="text-lg font-semibold text-ink mb-1">GitHub</h3>
+            <h3 className="text-lg font-semibold text-ink mb-1">{t.github}</h3>
             <p className="text-sm text-ink-muted group-hover:text-accent transition-colors">
               @Alejjaandro
             </p>
@@ -66,7 +69,7 @@ export default function Contact() {
         </div>
 
         <div className="flex justify-center pt-20">
-          <Link href="/">
+          <Link href={locale === 'es' ? '/es' : '/'}>
             <div className="rounded-full border border-border p-4 cursor-pointer hover:border-accent hover:text-accent transition-colors">
               <HiOutlineChevronDoubleUp className="text-ink-muted" size={24} />
             </div>

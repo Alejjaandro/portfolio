@@ -1,30 +1,24 @@
-import React from 'react'
-import Link from 'next/link'
-import { ui } from '../data/i18n'
-
-const projects = [
-  {
-    id: 'b2b-platform',
-    tagline: { en: 'B2B Automotive Parts Platform', es: 'Plataforma B2B de Recambios de Automoción' },
-  },
-  {
-    id: 'ecommerce-platform',
-    tagline: { en: 'Automotive E-commerce Platform', es: 'E-commerce de Recambios de Automoción' },
-  },
-  {
-    id: 'etl-automation',
-    tagline: { en: 'ETL & Marketplace Automation Platform', es: 'Plataforma de Automatización ETL y Marketplaces' },
-  },
-]
-
-const studies = [
-  {
-    id: 'b2b-platform',
-    role: { en: 'Full-Stack Developer', es: 'Desarrollador Full-Stack' },
+export const projectPages = {
+  'b2b-platform': {
+    slugEn: 'b2b-platform',
+    slugEs: 'plataforma-b2b',
+    metadataTitle: {
+      en: 'B2B Automotive Parts Platform',
+      es: 'Plataforma B2B de Recambios de Automoción',
+    },
+    metadataDescription: {
+      en: 'Case study of a B2B platform for automotive spare parts built with Angular 18, Node.js, FeathersJS, MySQL, JWT, AWS S3, TecDoc and Google Cloud Run.',
+      es: 'Proyecto profesional sobre una plataforma B2B para recambios de automoción construida con Angular 18, Node.js, FeathersJS, MySQL, JWT, AWS S3, TecDoc y Google Cloud Run.',
+    },
     company: { en: 'B2B', es: 'B2B' },
+    role: { en: 'Full-Stack Developer', es: 'Desarrollador Full-Stack' },
+    tagline: {
+      en: 'B2B Automotive Parts Platform',
+      es: 'Plataforma B2B de Recambios de Automoción',
+    },
     summary: {
       en: 'Developed and maintained a B2B platform for automotive spare parts, centralizing catalog search, stock validation, carts, quotes, orders and integrations with ERP, TecDoc/TecAlliance, DGT, AWS S3 and external supplier APIs.',
-      es: 'Desarrollé y mantuve una plataforma B2B para recambios automotrices, centralizando búsqueda de catálogo, validación de stock, carritos, presupuestos, pedidos e integraciones con ERP, TecDoc/TecAlliance, DGT, AWS S3 y APIs de proveedores externos.',
+      es: 'Desarrollé y mantuve una plataforma B2B para recambios de automoción, centralizando búsqueda de catálogo, validación de stock, carritos, presupuestos, pedidos e integraciones con ERP, TecDoc/TecAlliance, DGT, AWS S3 y APIs de proveedores externos.',
     },
     bullets: {
       en: [
@@ -59,13 +53,26 @@ const studies = [
       'Google Cloud Run',
     ],
   },
-  {
-    id: 'ecommerce-platform',
-    role: { en: 'Full-Stack Developer', es: 'Desarrollador Full-Stack' },
+  'ecommerce-platform': {
+    slugEn: 'ecommerce-platform',
+    slugEs: 'plataforma-ecommerce',
+    metadataTitle: {
+      en: 'Automotive E-commerce Platform',
+      es: 'E-commerce de Recambios de Automoción',
+    },
+    metadataDescription: {
+      en: 'Case study of an automotive e-commerce platform built with Angular 20, Node.js/FeathersJS v5, MySQL, PrestaShop, Gemini, Pinecone and a RAG-based AI assistant architecture.',
+      es: 'Proyecto profesional sobre un e-commerce de recambios de automoción construido con Angular 20, Node.js/FeathersJS v5, MySQL, PrestaShop, Gemini, Pinecone y una arquitectura de asistente de IA basada en RAG.',
+    },
     company: { en: 'E-COMMERCE', es: 'E-COMMERCE' },
+    role: { en: 'Full-Stack Developer', es: 'Desarrollador Full-Stack' },
+    tagline: {
+      en: 'Automotive E-commerce Platform',
+      es: 'E-commerce de Recambios de Automoción',
+    },
     summary: {
       en: 'Built a modern automotive e-commerce platform with Angular 20 and Node.js/FeathersJS v5, integrating MySQL, PrestaShop data, JWT authentication, cart/checkout flows and a RAG-based AI assistant powered by Gemini and Pinecone for semantic product search.',
-      es: 'Construí una plataforma e-commerce automotriz moderna con Angular 20 y Node.js/FeathersJS v5, integrando datos de MySQL/PrestaShop, autenticación JWT, flujos de carrito/checkout y un asistente de IA basado en RAG con Gemini y Pinecone para búsqueda de productos con IA.',
+      es: 'Construí un e-commerce de recambios de automoción moderno con Angular 20 y Node.js/FeathersJS v5, integrando datos de MySQL/PrestaShop, autenticación JWT, flujos de carrito/checkout y un asistente de IA basado en RAG con Gemini y Pinecone para búsqueda de productos con IA.',
     },
     bullets: {
       en: [
@@ -101,10 +108,23 @@ const studies = [
       'Google Cloud Run',
     ],
   },
-  {
-    id: 'etl-automation',
-    role: { en: 'Backend & Data Automation Developer', es: 'Desarrollador Backend y Automatización de Datos' },
+  'etl-automation': {
+    slugEn: 'etl-automation',
+    slugEs: 'automatizacion-etl',
+    metadataTitle: {
+      en: 'ETL & Marketplace Automation Platform',
+      es: 'Plataforma de Automatización ETL y Marketplaces',
+    },
+    metadataDescription: {
+      en: 'Case study of a Node.js ETL automation system for synchronizing automotive spare parts catalogs across 8+ marketplaces with AI-assisted enrichment and semantic data workflows.',
+      es: 'Proyecto profesional sobre un sistema de automatización ETL en Node.js para sincronizar catálogos de recambios de automoción en más de 8 marketplaces con enriquecimiento asistido por IA y flujos de datos semánticos.',
+    },
     company: { en: 'ETL', es: 'ETL' },
+    role: { en: 'Backend & Data Automation Developer', es: 'Desarrollador Backend y Automatización de Datos' },
+    tagline: {
+      en: 'ETL & Marketplace Automation Platform',
+      es: 'Plataforma de Automatización ETL y Marketplaces',
+    },
     summary: {
       en: 'Developed a Node.js ETL automation system for synchronizing automotive spare parts catalogs across 8+ marketplaces, ingesting supplier files via FTP/SFTP, transforming large datasets, enriching product data with AI/NLP and integrating TecDoc technical data.',
       es: 'Desarrollé un sistema de automatización ETL en Node.js para sincronizar catálogos de recambios automotrices en más de 8 marketplaces, ingestando archivos de proveedores vía FTP/SFTP, transformando grandes conjuntos de datos, enriqueciendo datos de productos con IA/NLP e integrando datos técnicos de TecDoc.',
@@ -143,82 +163,30 @@ const studies = [
       'Google Cloud Run',
     ],
   },
-]
+}
 
-export default function Experience({ locale = 'en' }) {
-  const t = ui[locale].experience
+export const projectSlugs = Object.keys(projectPages)
 
-  return (
-    <section id="experience" className="w-full">
-      <div className="max-w-[1240px] mx-auto px-6 py-24">
-        <div className="max-w-2xl mb-16">
-          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-4">
-            {t.sectionLabel}
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-ink tracking-tight">
-            {t.heading}
-          </h2>
-          <p className="mt-4 text-lg text-ink-muted leading-relaxed">
-            {t.description}
-          </p>
-        </div>
+export function getProjectBySlug(slug) {
+  return projectPages[slug]
+}
 
-        <div className="flex flex-col gap-12">
-          {studies.map((study, index) => (
-            <article
-              key={study.id}
-              className="group relative bg-surface-raised border border-border rounded-2xl p-8 md:p-10 transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5"
-            >
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-t-2xl" />
+export function getProjectByAnySlug(slug) {
+  for (const key of projectSlugs) {
+    const page = projectPages[key]
+    if (page.slugEn === slug || page.slugEs === slug) {
+      return { key, page }
+    }
+  }
+  return null
+}
 
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-xs font-bold uppercase tracking-wider text-accent bg-accent-soft px-3 py-1 rounded-full">
-                      {study.company[locale]}
-                    </span>
-                    <span className="text-xs text-ink-faint uppercase tracking-wider">
-                      {study.role[locale]}
-                    </span>
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-ink tracking-tight">
-                    <Link href={`${locale === 'es' ? '/es/proyectos' : '/projects'}/${study.id}`} className="hover:text-accent transition-colors">
-                      {projects.find(p => p.id === study.id)?.tagline[locale]}
-                    </Link>
-                  </h3>
-                </div>
-                <span className="text-5xl font-bold text-border group-hover:text-accent/20 transition-colors select-none">
-                  0{index + 1}
-                </span>
-              </div>
-
-              <p className="text-ink-muted leading-relaxed mb-8 max-w-3xl">
-                {study.summary[locale]}
-              </p>
-
-              <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8">
-                {study.bullets[locale].map((bullet, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-ink-muted">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="flex flex-wrap gap-2">
-                {study.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1.5 text-xs font-medium text-ink-muted bg-surface border border-border rounded-lg"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
+export function getOppositeProjectUrl(currentSlug, currentLocale) {
+  const result = getProjectByAnySlug(currentSlug)
+  if (!result) return '/'
+  const { page } = result
+  if (currentLocale === 'en') {
+    return `/es/proyectos/${page.slugEs}`
+  }
+  return `/projects/${page.slugEn}`
 }

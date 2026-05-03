@@ -3,31 +3,28 @@ import { AiOutlineMail } from 'react-icons/ai'
 import { ui } from '../data/i18n'
 import HighlightedText from './HighlightedText'
 
-export default function Main({ locale = 'en' }) {
+export default function RoleHero({ subtitle, title, description1, description2, authorName, locale = 'en' }) {
   const t = ui[locale].main
 
   return (
-    <section id="home" className="w-full min-h-screen flex items-center pt-20">
+    <section id="home" className="w-full min-h-[60vh] flex items-center pt-20">
       <div className="max-w-[1240px] w-full mx-auto px-6 py-24">
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-4">
-            {t.subtitle}
-          </p>
-
+          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-4">{subtitle}</p>
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-ink leading-[1.1] tracking-tight">
-            <span className="block">Alejandro Olaso</span>
-            <span className="block text-ink-muted text-3xl sm:text-4xl md:text-5xl mt-2">
-              {locale === 'es' ? 'Desarrollador Full-Stack' : 'Full-Stack Developer'}
-            </span>
+            {authorName && <span className="block">{authorName}</span>}
+            <span className={authorName ? "block text-ink-muted text-3xl sm:text-4xl md:text-5xl mt-2" : "block"}>{title}</span>
           </h1>
 
           <p className="mt-8 text-lg md:text-xl text-ink-muted leading-relaxed max-w-2xl">
-            <HighlightedText text={t.description1} locale={locale} />
+            <HighlightedText text={description1} locale={locale} />
           </p>
 
-          <p className="mt-5 text-base md:text-lg text-ink-muted leading-relaxed max-w-2xl">
-            <HighlightedText text={t.description2} locale={locale} />
-          </p>
+          {description2 && (
+            <p className="mt-5 text-base md:text-lg text-ink-muted leading-relaxed max-w-2xl">
+              <HighlightedText text={description2} locale={locale} />
+            </p>
+          )}
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a
